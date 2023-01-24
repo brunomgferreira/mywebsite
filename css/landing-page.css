@@ -1,0 +1,310 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(/fonts/ArquitectaMedium.otf);
+}
+
+body,
+html {
+    font-family: FuturaBook, Roboto, Arial;
+    margin: 0;
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Content - Landing */
+.intro {
+    height: 94vh;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
+    min-height: 200px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.fluid-grid {
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-container {
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.6em;
+    line-height: 100px;
+}
+
+.quote:hover .author {
+    opacity: 1;
+}
+
+.quote .author {
+    font-family: ArquitectaMedium;
+    font-size: 0.4em;
+    color: rgb(167, 167, 167);
+    line-height: 20px;
+
+    margin-top: -34px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.down-arrow-button {
+    position: absolute;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    cursor: pointer;
+    display: block;
+    bottom: 10%;
+}
+
+.down-arrow {
+    cursor: pointer;
+    width: 30px;
+}
+
+
+/* Content - Landing */
+
+/* Main Grid */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eu-img,
+.experience-img,
+.education-img,
+.projects-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 100%;
+}
+
+.experience-img,
+.projects-img {
+    object-position: left;
+}
+
+.about-me {
+    cursor: pointer;
+    position: relative;
+}
+
+.experience {
+    cursor: pointer;
+    position: relative;
+}
+
+.education {
+    cursor: pointer;
+    position: relative;
+}
+
+.projects {
+    cursor: pointer;
+    position: relative;
+}
+
+/* View - Hover */
+.about-me .view-hover,
+.education .view-hover,
+.experience .view-hover,
+.projects .view-hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10000;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.about-me:hover .view-hover,
+.education:hover .view-hover,
+.experience:hover .view-hover,
+.projects:hover .view-hover {
+    opacity: 1;
+}
+
+.about-me:hover,
+.education:hover,
+.experience:hover,
+.projects:hover {
+    opacity: 1;
+}
+
+.view-text {
+    font-size: 6em;
+    color: white;
+    margin: 0;
+}
+
+.view-button {
+    font-family: ArquitectaHeavy;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: rgb(90, 90, 90);
+
+    padding: 16px 40px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+/* View - Hover */
+
+/* Main Grid */
+
+
+@media all and (max-width: 999px) {
+    .intro {
+        height: 90vh;
+    }
+
+    .quote {
+        font-size: 4em;
+        line-height: 1.8em;
+        text-align: center;
+        width: 66%;
+    }
+
+    .main-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .left-section {
+        display: grid;
+        grid-template-rows: 600px 600px;
+        height: 1200px;
+    }
+
+    .eu-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+
+    .right-section {
+        display: grid;
+        grid-template-rows: 600px 600px;
+        height: 1200px;
+
+    }
+
+    .experience,
+    .projects {
+        display: flex;
+        height: 600px;
+    }
+
+}
+
+
+@media all and (min-width: 1000px) {
+    .quote {
+        font-size: 4em;
+        line-height: 80px;
+        text-align: center;
+        width: 66%;
+    }
+
+    .main-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-section {
+        display: grid;
+        grid-template-rows: 800px 400px;
+        height: 1200px;
+    }
+
+    .eu-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+
+    .right-section {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .experience,
+    .projects {
+        display: flex;
+        height: 600px;
+    }
+}

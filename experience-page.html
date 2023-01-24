@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bruno Ferreira</title>
+    <link rel="stylesheet" href="css/experience-page.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="header-name" href="landing-page.html">BRUNO <br> FERREIRA</a>
+        <img class="menu-icon" src="images/menu.svg" onclick="openmenu()">
+        <nav id="menu">
+            <ul>
+                <li><a href="about-page.html">About</a></li>
+                <li><a href="experience-page.html">Experience</a></li>
+                <li><a href="education-page.html">Education</a></li>
+                <li><a href="projects-page.html">Projects</a></li>
+                <li><a href="contact-page.html">Contact</a></li>
+                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Download CV</a></li>
+            </ul>
+            <img class="close-icon" src="/images/close.svg" onclick="closemenu()">
+            <a class="menu-name" href="landing-page.html">BRUNO <br> FERREIRA</a>
+        </nav>
+    </header>
+    <div class="exp">
+        <div class="exp-text">
+            <p class="exp-title">EXPERIENCE</p>
+            <p>"The only source of knowledge is experience."</p>
+            <p class="author">Albert Einstein</p>
+            <div style="display: flex;">
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <p>Today</p>
+                        <div class="vl"></div>
+                        <p>2022</p>
+                        <div class="vl"></div>
+                        <p>2021</p>
+                        <div class="vl"></div>
+                        <p>2019</p>
+                        <div class="vl"></div>
+                        <p>2012</p>
+                        <div class="vl"></div>
+                        <p>2004</p>
+                    </div>
+                    <div class="timeline-text">
+                        <div class="time-stamp">
+                            <p class="timeline-text-title">JuniFEUP</p>
+                            <p class="timeline-text-info">Marketing Department</p>
+                        </div>
+                        <div class="time-stamp">
+                            <p class="timeline-text-title">Student Association</p>
+                            <p class="timeline-text-info">Vice President of the General Assembly</p>
+                        </div>
+                        <div class="time-stamp">
+                            <p class="timeline-text-title">Liga Portuguesa Contra o Cancro</p>
+                            <p class="timeline-text-info">Volunteer</p>
+                        </div>
+                        <div class="time-stamp">
+                            <p class="timeline-text-title">Federated Football</p>
+                            <p class="timeline-text-info">Football Academy Player</p>
+                        </div>
+                        <div class="time-stamp">
+                            <p class="timeline-text-title">31 January 2004</p>
+                            <p class="timeline-text-info">I was born</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>&#64; 2023. Bruno Ferreira</p>
+        </div>
+        <div class="footer-right">
+            <a href="contact-page.html" class="contact-button">
+                Contact
+            </a>
+            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="linkedin-button">
+                Linkedin
+            </a>
+            <a href="#" class="github-button">
+                GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        var menu = document.getElementById("menu");
+
+        function closemenu() {
+
+            menu.style.top = "-200vh"
+            window.onscroll = function () { };
+
+        }
+
+        function openmenu() {
+            menu.style.top = "0"
+
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+                // if any scroll is attempted, set this to the previous value
+                window.onscroll = function () {
+                    window.scrollTo(scrollLeft, scrollTop);
+                };
+
+        }
+    </script>
+
+</body>
+
+</html>

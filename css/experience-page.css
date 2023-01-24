@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(/fonts/ArquitectaMedium.otf);
+}
+
+body,
+html {
+    font-family: FuturaBook, ArquitectaHeavy, Roboto, Arial;
+    margin: 0;
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Content */
+
+.exp {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    margin-top: 300px;
+    padding: 0 100px;
+}
+
+.exp-title {
+    font-size: 1.2em;
+    font-family: ArquitectaBold;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+
+    padding-left: 40px;
+    margin-bottom: -10px;
+}
+
+.exp-text {
+    font-size: 3em;
+    line-height: 2em;
+}
+
+.author {
+    font-size: 0.6em;
+    font-family: ArquitectaMedium;
+    line-height: 20px;
+    margin-top: -20px;
+}
+
+.timeline-container {
+    padding-right: 90px;
+    padding-top: 100px;
+    display: flex;
+    margin: auto;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: gray;
+}
+
+.vl {
+    border: 0.05em solid rgb(189, 189, 189);
+    border-radius: 0.2em;
+    background-color: rgb(189, 189, 189);
+    height: 10em;
+    width: 0;
+}
+
+.timeline-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 6em;
+    margin-top: 4em;
+}
+
+.time-stamp {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-text-title {
+    display: inline;
+    line-height: 1.4em;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.timeline-text-info {
+    display: inline;
+    line-height: 1.4em;
+    font-size: 0.6em;
+    margin-top: 0.2em;
+}
+
+
+/* Content */

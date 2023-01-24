@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(/fonts/ArquitectaMedium.otf);
+}
+
+body,
+html {
+    font-family: FuturaBook, ArquitectaHeavy, Roboto, Arial;
+    margin: 0;
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Content */
+
+.projects {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 240px;
+}
+
+.projects-title {
+    font-size: 1em;
+    font-family: ArquitectaBold;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+
+    padding-left: 40px;
+    margin-bottom: -10px;
+}
+
+.projects-text {
+    font-size: 2.4em;
+    line-height: 2em;
+    text-align: justify;
+
+}
+
+.author {
+    font-size: 0.6em;
+    font-family: ArquitectaMedium;
+    line-height: 20px;
+    margin-top: -20px;
+}
+
+.image-container {
+    padding-top: 200px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    padding: 0px 120px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+}
+
+.container-title {
+    font-family: ArquitectaMedium;
+    color: rgb(90, 90, 90);
+    font-weight: 100;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.container-text {
+    font-size: 2.4em;
+    line-height: 2em;
+    text-align: justify;
+}
+
+/* Content */

@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(/fonts/ArquitectaMedium.otf);
+}
+
+body,
+html {
+    font-family: FuturaBook, ArquitectaHeavy, Roboto, Arial;
+    margin: 0;
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Content */
+
+.contact {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    padding: 0px 100px;
+    margin-top: 300px;
+}
+
+.contact-title {
+    font-size: 1em;
+    font-family: ArquitectaBold;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+
+    padding-left: 40px;
+    margin-bottom: -10px;
+}
+
+.contact-text {
+    font-size: 2.4em;
+    line-height: 2em;
+    text-align: justify;
+
+}
+
+
+
+.container-title {
+    font-family: ArquitectaBold;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.container-text {
+    text-decoration: none;
+    color: black;
+    margin-bottom: -4px;
+    border-bottom-width: 2px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.container-text:hover {
+    margin-bottom: -5px;
+    border-bottom-style: solid;
+    border-bottom-color: black
+}
+
+/* Content */
+
+@media all and (max-width: 1279px) {
+
+    .info {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .container {
+        margin-bottom: 4em;
+        text-align: center;
+    }
+
+}
+
+
+@media all and (min-width: 1280px) {
+    .info {
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        padding: 0px 100px;
+        margin-top: 80px;
+        justify-content: space-between;
+        font-size: 2em;
+        line-height: 1em;
+    }
+
+}

@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(/fonts/ArquitectaMedium.otf);
+}
+
+body,
+html {
+    font-family: FuturaBook, ArquitectaHeavy, Roboto, Arial;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Content */
+
+.about {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    padding: 0 100px;
+    margin-top: 240px;
+}
+
+.about-title {
+    font-size: 1em;
+    font-family: ArquitectaBold;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+
+    padding-left: 40px;
+    margin-bottom: -10px;
+}
+
+.about-text {
+    font-size: 2.4em;
+    line-height: 2em;
+    text-align: justify;
+
+}
+
+.info {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    padding: 0 100px;
+    margin-top: 80px;
+    justify-content: space-between;
+    font-size: 2em;
+    line-height: 22px;
+    margin-bottom: 100px;
+}
+
+.container-title {
+    font-family: ArquitectaBold;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.995fr 0.5fr 0.75fr;
+
+    width: 100%;
+}
+
+.grid-img1,
+.grid-img2,
+.grid-img3,
+.grid-img4 {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Content */
+
+
+@media all and (max-width: 1279px) {
+    .info {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 60px;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .container {
+        margin-bottom: 4em;
+        text-align: center;
+    }
+
+    .grid {
+        margin-top: 0;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1.995fr 0.5fr;
+
+        width: 100%;
+    }
+
+    .grid-img1,
+    .grid-img2,
+    .grid-img3 {
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .grid-img4 {
+        width: 0px;
+    }
+}
+
+@media all and (max-width: 999px) {
+
+    .info {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 60px;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .container {
+        margin-bottom: 4em;
+        text-align: center;
+    }
+
+    .grid {
+        padding-top: 140px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        width: 100%;
+    }
+
+
+    .grid-img1,
+    .grid-img2,
+    .grid-img4 {
+        display: flex;
+        object-fit: cover;
+        width: 100vw;
+        height: 80vw;
+    }
+
+
+    .grid-img3 {
+        height: 0px;
+    }
+}

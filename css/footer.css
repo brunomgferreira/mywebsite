@@ -1,0 +1,82 @@
+/* Footer */
+
+footer {
+    padding: 0 60px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 160px;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+.contact-button {
+    margin-right: 40px;
+    margin-bottom: -4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: gray;
+}
+
+.contact-button:hover {
+    margin-bottom: -5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(170, 170, 170);
+}
+
+.linkedin-button {
+    margin-right: 40px;
+    margin-bottom: -4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: gray;
+}
+
+.linkedin-button:hover {
+    margin-bottom: -5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(170, 170, 170);
+}
+
+.github-button {
+    margin-bottom: -4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+
+    text-decoration: none;
+    color: gray;
+}
+
+.github-button:hover {
+    margin-bottom: -5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(170, 170, 170);
+}
+
+/* Footer */
