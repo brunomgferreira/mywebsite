@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "FuturaBook";
+    src: url(https://brunomgferreira.github.io/mywebsite/fonts/FuturaBook.ttf);
+}
+
+@font-face {
+    font-family: "ArquitectaHeavy";
+    src: url(https://brunomgferreira.github.io/mywebsite/fonts/ArquitectaHeavy.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaBold";
+    src: url(https://brunomgferreira.github.io/mywebsite/fonts/ArquitectaBold.otf);
+}
+
+@font-face {
+    font-family: "ArquitectaMedium";
+    src: url(https://brunomgferreira.github.io/mywebsite/fonts/ArquitectaMedium.otf);
+}
