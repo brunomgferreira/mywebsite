@@ -16,36 +16,42 @@
 
 <body>
     <header>
-        <a class="header-name" href="index">BRUNO <br> FERREIRA</a>
-        <img class="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" onclick="openmenu()">
-        <nav id="menu">
-            <ul>
-                <li><a href="about">About</a></li>
-                <li><a href="experience">Experience</a></li>
-                <li><a href="education">Education</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Download CV</a></li>
-            </ul>
-            <img class="close-icon" src="https://brunomgferreira.github.io/mywebsite/images/close.svg"
-                onclick="closemenu()">
-            <a class="menu-name" href="index">BRUNO <br> FERREIRA</a>
-        </nav>
+        <p id="header-name">BRUNO <br> FERREIRA</p>
+        <img class="scale-appear" id="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" alt="Menu Icon">
+        <img id="close-icon" class="hidden" src="https://brunomgferreira.github.io/mywebsite/images/close.svg" alt="Close Icon">
     </header>
+    <menu class="hidden">
+        <nav>
+            <ul>
+                <li><a href="projects">Projects</a></li>
+                <li><a href="about">About me</a></li>
+                <li><a href="experience">Experience</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </menu>
+    <main>
+        <div id="project-display">
 
-    <div class="projects">
-        <div class="projects-text">
-            <p class="projects-title">PROJECTS</p>
-            <p>"The best preparation for good work tomorrow is to do good work today."</p>
-            <p class="author">Elbert Hubbard</p>
         </div>
-    </div>
+        <div>
+            <div>
+                <p id="projects-title">PROJECTS</p>
+                <p id="projects-number">5</p>
+            </div>
+            <ul id="projects">
+                <li>Done</li>
+                <li>Battleship</li>
+                <li>My Website</li>
+                <li>University Projects</li>
+                <li>Car Restoration</li>
+            </ul>
+        </div>
+    </main>
 
-    <div class="image-container">
-        <img class="project-image" src="images/car.png">
-    </div>
-
-    <div class="info">
+    <!-- <div class="info">
         <div>
             <div class="container-title">
                 <p>CAR RESTORATION</p>
@@ -60,11 +66,6 @@
             </div>
         </div>
     </div>
-
-    <div class="image-container">
-        <img class="project-image" src="images/website-mockup.png">
-    </div>
-
     <div class="info">
         <div>
             <div class="container-title">
@@ -79,50 +80,26 @@
                 </p>
             </div>
         </div>
-    </div>
-
-
+    </div> -->
 
     <footer>
         <div class="footer-left">
             <p>&#64; 2023. Bruno Ferreira</p>
         </div>
         <div class="footer-right">
-            <a href="contact" class="contact-button">
+            <a href="contact" class="footer-button">
                 Contact
             </a>
-            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="linkedin-button">
+            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="footer-button">
                 Linkedin
             </a>
-            <a href="https://github.com/brunomgferreira" target="_blank" class="github-button">
+            <a href="https://github.com/brunomgferreira" target="_blank" class="footer-button">
                 GitHub
             </a>
         </div>
     </footer>
 
-    <script>
-        var menu = document.getElementById("menu");
-
-        function closemenu() {
-
-            menu.style.top = "-200vh"
-            window.onscroll = function () { };
-
-        }
-
-        function openmenu() {
-            menu.style.top = "0"
-
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-                // if any scroll is attempted, set this to the previous value
-                window.onscroll = function () {
-                    window.scrollTo(scrollLeft, scrollTop);
-                };
-
-        }
-    </script>
+    <script type="module" src="projects.js"></script>
 
 </body>
 

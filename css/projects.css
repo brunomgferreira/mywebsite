@@ -1,10 +1,23 @@
-body,
 html {
-    font-family: FuturaBook, ArquitectaHeavy, Roboto, Arial;
     margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: FuturaBook, Roboto, Arial;
 }
 
 body {
+    width: 1980px;
+    max-width: 90vw;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -23,23 +36,205 @@ body {
 
 /* Content */
 
-.projects {
-    max-width: 1500px;
-    margin: auto;
-    padding: 0px 100px;
+main {
+    height: 100%;
+    width: 90%;
+
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-top: 240px;
+    align-items: center;
+    flex-grow: 1;
+    gap: 2rem;
+    
+    transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out, display 0.6s ease-in-out;
 }
 
-.projects-title {
-    font-size: 1em;
+.hidden {
+    display: none;
+}
+
+#project-display {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-radius: 2rem;
+    background-color: black;
+}
+
+main div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+    height: 100%;
+}
+
+main div:last-child div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: relative;
+    padding-bottom: 0.2rem;
+
+    --border-color: rgb(150, 150, 150);
+    --border-width: 2px;
+    --border-appear-animation-duration: 0.5s;
+    --border-disappear-animation-duration: 0.3s;
+}
+
+.border-slide-appear::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    animation: borderSlideAppear var(--border-appear-animation-duration, 0.2s) forwards;
+    animation-delay: var(--border-animation-delay, 0);
+}
+
+.border-slide-disappear::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    animation: borderSlideDisappear var(--border-disappear-animation-duration, 0.1s) forwards;
+    animation-delay: var(--border-animation-delay, 0);
+}
+
+@keyframes borderSlideAppear {
+    0% {
+        background-color: var(--border-color, black);
+        height: var(--border-width, 1px);
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        background-color: var(--border-color, black);
+        height: var(--border-width, 1px);
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes borderSlideDisappear {
+    0% {
+
+        background-color: var(--border-color, black);
+        height: var(--border-width, 1px);
+        opacity: 1;
+        width: 100%;
+    }
+    100% {
+        background-color: var(--border-color, black);
+        height: var(--border-width, 1px);
+        opacity: 0;
+        width: 0;
+    }
+}
+
+#projects-title {
+    font-size: 2.5rem;
     font-family: ArquitectaBold;
+    margin: 0;
     letter-spacing: 3px;
     color: rgb(150, 150, 150);
+}
 
-    padding-left: 40px;
-    margin-bottom: -10px;
+#projects-number {
+    font-size: 1.8rem;
+    font-family: ArquitectaBold;
+    margin: 0;
+    letter-spacing: 3px;
+    color: rgb(150, 150, 150);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#projects li {
+    list-style: none;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    border-bottom: 1px solid black;
+    padding-bottom: 1.4rem;
+    padding-top: 1.4rem;
+
+    --animation-slide-appear-duration: 0.2s;
+    --animation-slide-disappear-duration: 0.1s;
+}
+
+#projects li:last-child {
+    border-bottom: none;
+}
+
+/* Animation classes */
+.slide-appear {
+    opacity: 0;
+    animation: slideAppear var(--animation-slide-appear-duration, 0.5s) forwards;
+}
+
+.slide-disappear {
+    animation: slideDisappear var(--animation-slide-disappear-duration, 0.3s) forwards;
+}
+
+@keyframes slideAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-0.5em) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideDisappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-0.5em) scale(0.8);
+    }
+}
+
+.opacity-appear {
+    opacity: 0;
+    animation: opacityAppear var(--animation-opacity-appear-duration, 0.5s) forwards;
+}
+
+.opacity-disappear {
+    animation: opacityDisappear var(--animation-opacity-disappear-duration, 0.3s) forwards;
+}
+
+@keyframes opacityAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityDisappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .projects-text {
