@@ -1,10 +1,23 @@
-body,
 html {
-    font-family: FuturaBook, Roboto, Arial;
     margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: FuturaBook, Roboto, Arial;
 }
 
 body {
+    width: 1980px;
+    max-width: 90vw;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -21,270 +34,220 @@ body {
 }
 
 /* Content - Landing */
-.intro {
-    height: 94vh;
-}
 
-.center {
+main {
     height: 100%;
-    width: 100%;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
+    
+    transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out, display 0.6s ease-in-out;
 }
 
-.middle {
-    min-height: 200px;
+main > div:first-child {
+    height: 100%;
     display: flex;
-    vertical-align: middle;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.fluid-grid {
-    max-width: 1500px;
-    margin: auto;
-    text-align: center;
+main > div:nth-child(2) {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .quote-container {
     max-width: 1500px;
-    margin: auto;
-    text-align: center;
+
     display: flex;
     justify-content: center;
+    
+    text-align: center;
 }
 
 .quote {
+    margin: 0;
+
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 3.6em;
-    line-height: 100px;
 }
 
-.quote:hover .author {
-    opacity: 1;
-}
-
-.quote .author {
-    font-family: ArquitectaMedium;
-    font-size: 0.4em;
-    color: rgb(167, 167, 167);
-    line-height: 20px;
-
-    margin-top: -34px;
-
+main nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: 0.3s;
+
+    gap: 3rem;
+}
+
+main nav a {
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    margin-bottom: -4px;
+    cursor: pointer;
+
+    font-size: 1.2em;
+    text-decoration: none;
+    color: gray;
+
+    transition: opacity 1.8s ease, transform 1.5s ease, color 400ms ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+main nav a:hover {
+    margin-bottom: -5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    /* border-bottom-color: rgb(170, 170, 170); */
+
+    color: black;
+    border-bottom-color: black;
 }
 
 .down-arrow-button {
-    position: absolute;
     border: none;
     background-color: rgba(0, 0, 0, 0.0);
     cursor: pointer;
-    display: block;
-    bottom: 10%;
+    padding: 1rem;
+    border-radius: 4rem;
+    width: 4rem;
+    align-items: center;
 }
 
 .down-arrow {
-    cursor: pointer;
-    width: 30px;
+    width: 2rem;
 }
 
-
-/* Content - Landing */
-
-/* Main Grid */
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Animation classes */
+.quote-appear {
+    animation: quoteAppear 1s forwards;
 }
 
-.eu-img,
-.experience-img,
-.education-img,
-.projects-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 100%;
+.main-nav-appear {
+    animation: mainNavAppear 1s forwards;
+    animation-delay: 0.4s;
 }
 
-.experience-img,
-.projects-img {
-    object-position: left;
-}
-
-.about-me {
-    cursor: pointer;
-    position: relative;
-}
-
-.experience {
-    cursor: pointer;
-    position: relative;
-}
-
-.education {
-    cursor: pointer;
-    position: relative;
-}
-
-.projects {
-    cursor: pointer;
-    position: relative;
-}
-
-/* View - Hover */
-.about-me .view-hover,
-.education .view-hover,
-.experience .view-hover,
-.projects .view-hover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 10000;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.8s;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.about-me:hover .view-hover,
-.education:hover .view-hover,
-.experience:hover .view-hover,
-.projects:hover .view-hover {
-    opacity: 1;
-}
-
-.about-me:hover,
-.education:hover,
-.experience:hover,
-.projects:hover {
-    opacity: 1;
-}
-
-.view-text {
-    font-size: 6em;
-    color: white;
-    margin: 0;
-}
-
-.view-button {
-    font-family: ArquitectaHeavy;
-    font-size: 2em;
-    letter-spacing: 3px;
-    color: rgb(90, 90, 90);
-
-    padding: 16px 40px;
-    margin-top: 20px;
-
-    border: none;
-    border-radius: 50px;
-
-    cursor: pointer;
-}
-
-/* View - Hover */
-
-/* Main Grid */
-
-
-@media all and (max-width: 999px) {
-    .intro {
-        height: 90vh;
+@keyframes quoteAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-1em) scale(0.9);
     }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
+@keyframes mainNavAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-4em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-disappear {
+    animation: quoteDisappear 0.3s forwards;
+    animation-delay: 0.15s;
+}
+
+.main-nav-disappear {
+    animation: mainNavDisappear 0.3s forwards;
+}
+
+@keyframes quoteDisappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-2em) scale(0.9);
+    }
+}
+
+@keyframes mainNavDisappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-4em);
+    }
+}
+
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
     .quote {
-        font-size: 4em;
+        font-size: 3rem;
         line-height: 1.8em;
         text-align: center;
         width: 66%;
     }
-
-    .main-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .left-section {
-        display: grid;
-        grid-template-rows: 600px 600px;
-        height: 1200px;
-    }
-
-    .eu-img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-    }
-
-
-    .right-section {
-        display: grid;
-        grid-template-rows: 600px 600px;
-        height: 1200px;
-
-    }
-
-    .experience,
-    .projects {
-        display: flex;
-        height: 600px;
-    }
-
 }
 
-
-@media all and (min-width: 1000px) {
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
     .quote {
-        font-size: 4em;
-        line-height: 80px;
-        text-align: center;
         width: 66%;
+
+        font-size: 3rem;
+        line-height: 1.8em;
+        text-align: center;
     }
+}
 
-    .main-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    .quote {
+        width: 66%;
+
+        font-size: 3rem;
+        line-height: 1.8em;
+        text-align: center;
     }
+}
 
-    .left-section {
-        display: grid;
-        grid-template-rows: 800px 400px;
-        height: 1200px;
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+    .quote {
+        width: 66%;
+
+        font-size: 4em;
+        line-height: 1.8em;;
+        text-align: center;
     }
+}
 
-    .eu-img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-    }
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+    .quote {
+        width: 66%;
 
-
-    .right-section {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-
-    }
-
-    .experience,
-    .projects {
-        display: flex;
-        height: 600px;
+        font-size: 4em;
+        line-height: 1.8em;;
+        text-align: center;
     }
 }
