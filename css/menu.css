@@ -66,38 +66,12 @@ menu nav ul li a:hover::after {
 
 .menu-nav-ul-li-disappear {
   animation: menuNavUlLiDisappear 0.3s forwards;
-  animation-delay: calc(0.05s * (5 - var(--index)));
 }
 
 .menu-nav-ul-li-appear {
   opacity: 0;
   transform: scale(0);
   animation: menuNavUlLiAppear 0.3s forwards;
-  animation-delay: calc(0.15s * (var(--index) + 1));
-}
-
-menu nav ul li:nth-child(1) {
-  --index: 0;
-}
-
-menu nav ul li:nth-child(2) {
-  --index: 1;
-}
-
-menu nav ul li:nth-child(3) {
-  --index: 2;
-}
-
-menu nav ul li:nth-child(4) {
-  --index: 3;
-}
-
-menu nav ul li:nth-child(5) {
-  --index: 4;
-}
-
-menu nav ul li:nth-child(6) {
-  --index: 5;
 }
 
 @keyframes menuNavUlLiDisappear {
