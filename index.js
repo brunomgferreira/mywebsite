@@ -1,10 +1,15 @@
-import { openButton, closeButton, openMenu, closeMenu } from "./menu.js";
+import {
+  openButton,
+  closeButton,
+  openMenu as openMenuFunction,
+  closeMenu as closeMenuFunction,
+} from "./menu.js";
 
 const landingPage = (() => {
   const quoteContainer = document.getElementsByClassName("quote-container")[0];
   const mainNav = quoteContainer.nextElementSibling;
 
-  const openMenuLandingPage = () => {
+  const openMenu = () => {
     quoteContainer.classList.remove("quote-appear");
     mainNav.classList.remove("main-nav-appear");
 
@@ -14,10 +19,10 @@ const landingPage = (() => {
     quoteContainer.classList.add("quote-disappear");
     mainNav.classList.add("main-nav-disappear");
 
-    openMenu();
+    openMenuFunction();
   };
 
-  const closeMenuLandingPage = () => {
+  const closeMenu = () => {
     quoteContainer.classList.remove("quote-disappear");
     mainNav.classList.remove("main-nav-disappear");
 
@@ -27,25 +32,25 @@ const landingPage = (() => {
     quoteContainer.classList.add("quote-appear");
     mainNav.classList.add("main-nav-appear");
 
-    closeMenu();
+    closeMenuFunction();
   };
 
   return {
-    openMenuLandingPage,
-    closeMenuLandingPage,
+    openMenu,
+    closeMenu,
   };
 })();
 
 openButton.addEventListener("click", () => {
-  landingPage.openMenuLandingPage();
+  landingPage.openMenu();
 });
 
 closeButton.addEventListener("click", () => {
-  landingPage.closeMenuLandingPage();
+  landingPage.closeMenu();
 });
 
 const headerName = document.getElementById("header-name");
 
 headerName.addEventListener("click", () => {
-  landingPage.closeMenuLandingPage();
+  landingPage.closeMenu();
 });
