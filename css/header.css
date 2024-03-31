@@ -66,4 +66,8 @@ header {
     }
   }
 
+.hidden {
+    display: none;
+}
+
 /* Header */
