@@ -302,11 +302,11 @@ main > div:last-child > div:first-child {
 
 .opacity-appear {
     opacity: 0;
-    animation: opacityAppear var(--animation-opacity-appear-duration, 0.5s) forwards;
+    animation: opacityAppear var(--animation-opacity-appear-duration, 0.4s) forwards;
 }
 
 .opacity-disappear {
-    animation: opacityDisappear var(--animation-opacity-disappear-duration, 0.3s) forwards;
+    animation: opacityDisappear var(--animation-opacity-disappear-duration, 0.1s) forwards;
 }
 
 @keyframes opacityAppear {
