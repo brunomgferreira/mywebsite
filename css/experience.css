@@ -63,10 +63,12 @@ main > header > div {
 }
 
 main > header > div > h1 {
+    font-family: ArquitectaMedium;
     line-height: 0;
     font-size: 2rem;
     letter-spacing: 2px;
     color: gray;
+    padding-left: 2rem;
 }
 
 main > header > div > p:nth-of-type(1) {
