@@ -22,8 +22,46 @@ const projectContentContainer = document.getElementById(
   "project-content-container"
 );
 
+const projectSkills = document.getElementById("project-skills");
+const projectImage = document.getElementById("poject-image");
+
 let selectedProjectLi = null;
 let selectedIndex = -1;
+
+const projectDetails = [
+  {
+    image: "./images/done.png",
+    skills: [
+      "React",
+      "Styled-Components",
+      "NodeJS",
+      "ExpressJS",
+      "JsonWebToken",
+      "MySQL",
+    ],
+  },
+  {
+    image: "./images/battleship.png",
+    skills: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    image: "./images/mywebsite.png",
+    skills: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    image: "./images/car.png",
+    skills: ["Resource & Time Management"],
+  },
+];
+
+const projectsHref = [
+  "done.html",
+  "battleship.html",
+  "mywebsite.html",
+  "carRestoration.html",
+];
+
+projectsNumber.textContent = projectDetails.length;
 
 const projectsHeaderAppear = () => {
   projectsHeader.classList.remove("border-slide-disappear");
@@ -99,6 +137,21 @@ const selectProject = (li, index) => {
     if (selectedProjectLi != null)
       selectedProjectLi.textContent = `.${li.textContent}`;
   }
+  if (index != -1) updateProjectDetails(index);
+};
+
+const updateProjectDetails = (index) => {
+  const { image, skills } = projectDetails[index];
+
+  projectImage.src = image;
+
+  projectSkills.innerHTML = "";
+
+  skills.forEach((skill) => {
+    const li = document.createElement("li");
+    li.textContent = skill;
+    projectSkills.appendChild(li);
+  });
 };
 
 const closeProjectDisplay = () => {
@@ -163,14 +216,6 @@ headerName.addEventListener("click", () => {
     window.location.href = "/index.html";
   }, 310);
 });
-
-const projectsHref = [
-  "done.html",
-  "battleship.html",
-  "mywebsite.html",
-  "universityProjects.hmtl",
-  "carRestoration.html",
-];
 
 projectList.forEach((li, index) => {
   li.addEventListener("click", () => {
