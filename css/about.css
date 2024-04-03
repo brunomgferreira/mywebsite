@@ -105,7 +105,6 @@ main {
     width: 60%;
     height: 100%;
     box-sizing: border-box;
-    cursor: pointer;
     transition: opacity 0.5s ease;
     display: flex;
     flex-direction: column;
