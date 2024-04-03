@@ -59,11 +59,6 @@ main > header {
   flex-direction: column;
 }
 
-#project-title {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
 #poject-image-container {
   position: relative;
   z-index: 1;
@@ -145,6 +140,8 @@ main > header {
   list-style: none;
 }
 
+/* Animation classes */
+
 .border-slide-appear::after {
   content: "";
   width: 0;
@@ -198,48 +195,6 @@ main > header {
   }
 }
 
-#projects-title {
-  font-size: 2.5rem;
-  font-family: ArquitectaBold;
-  margin: 0;
-  letter-spacing: 3px;
-  color: rgb(150, 150, 150);
-}
-
-#projects-number {
-  font-size: 1.8rem;
-  font-family: ArquitectaBold;
-  margin: 0;
-  letter-spacing: 3px;
-  color: rgb(150, 150, 150);
-}
-
-#projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-#projects li {
-  list-style: none;
-  font-size: 1.4rem;
-  letter-spacing: 3px;
-  border-bottom: 1px solid black;
-  padding-bottom: 1.4rem;
-  padding-top: 1.4rem;
-  cursor: pointer;
-
-  --animation-slide-appear-duration: 0.2s;
-  --animation-slide-disappear-duration: 0.1s;
-}
-
-#projects li:last-child {
-  border-bottom: none;
-}
-
-/* Animation classes */
 .slide-appear {
   opacity: 0;
   animation: slideAppear var(--animation-slide-appear-duration, 0.5s) forwards;
@@ -367,47 +322,6 @@ main > header {
   }
 }
 
-
-.projects-text {
-  font-size: 2.4em;
-  line-height: 2em;
-  text-align: justify;
-
-}
-
-.author {
-  font-size: 0.6em;
-  font-family: ArquitectaMedium;
-  line-height: 20px;
-  margin-top: -20px;
-}
-
-.image-container {
-  padding-top: 200px;
-  height: 600px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-image {
-  display: flex;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.info {
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  justify-content: left;
-  padding: 0px 120px;
-  margin-top: 40px;
-  margin-bottom: 120px;
-}
-
 .title-container h1 {
   font-family: ArquitectaMedium;
   color: rgb(90, 90, 90);
@@ -415,6 +329,7 @@ main > header {
   font-size: 2.4em;
   letter-spacing: 2px;
   word-spacing: 4px;
+  text-align: center;
 }
 
 .text-container {
