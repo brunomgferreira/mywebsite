@@ -49,7 +49,7 @@ closeButton.addEventListener("click", () => {
   landingPage.closeMenu();
 });
 
-const headerName = document.getElementById("header");
+const headerName = document.getElementById("header-name");
 
 headerName.addEventListener("click", () => {
   landingPage.closeMenu();

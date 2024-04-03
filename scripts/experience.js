@@ -154,7 +154,7 @@ headerName.addEventListener("click", () => {
   closeMenu();
   closeMain();
   setTimeout(() => {
-    window.location.href = "/index";
+    window.location.href = "/mywebsite/index";
   }, 310);
 });
 
