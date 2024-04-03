@@ -16,98 +16,65 @@
 
 <body>
     <header>
-        <a class="header-name" href="index">BRUNO <br> FERREIRA</a>
-        <img class="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" onclick="openmenu()">
-        <nav id="menu">
-            <ul>
-                <li><a href="about">About</a></li>
-                <li><a href="experience">Experience</a></li>
-                <li><a href="education">Education</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Download CV</a></li>
-            </ul>
-            <img class="close-icon" src="https://brunomgferreira.github.io/mywebsite/images/close.svg"
-                onclick="closemenu()">
-            <a class="menu-name" href="index">BRUNO <br> FERREIRA</a>
-        </nav>
+        <p id="header-name">BRUNO <br> FERREIRA</p>
+        <img class="scale-appear" id="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" alt="Menu Icon">
+        <img id="close-icon" class="hidden" src="https://brunomgferreira.github.io/mywebsite/images/close.svg" alt="Close Icon">
     </header>
+    <menu class="hidden">
+        <nav>
+            <ul>
+                <li><a href="projects">Projects</a></li>
+                <li><a href="about">About me</a></li>
+                <li><a href="experience">Experience</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </menu>
 
-    <div class="contact">
-        <div class="contact-text">
-            <div class="contact-title">
-                <p>CONTACT</p>
-            </div>
-            <p>Say hello to get in touch with me. I would be delighted to connect with you.</p>
-        </div>
-    </div>
-
-
-    <div class="info">
-        <div class="container">
-            <p class="container-title">PHONE</p>
+    <main>
+        <header>
             <div>
-                <p>+351 910 681 336</p>
+                <h1>CONTACT</h1>
+                <p>Say hello to get in touch with me. I would be delighted to connect with you.</p>
             </div>
-        </div>
-        <div class="container">
-            <p class="container-title">EMAIL</p>
+        </header>
+        <div class="info">
             <div>
-                <a class="container-text" href="mailto:brunomgferreira17@gmail.com"
-                    target="_blank">brunomgferreira17@gmail.com</a>
+                <h2>EMAIL</h2>
+                <a href="mailto:brunomgferreira17@gmail.com" target="_blank">brunomgferreira17@gmail.com</a>
             </div>
-        </div>
-        <div class="container">
-            <p class="container-title">LINKEDIN</p>
             <div>
-                <a class="container-text" href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank">Connect
-                    with me</a>
+                <h2>LINKEDIN</h2>
+                <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank">Connect with me</a>
             </div>
-        </div>
-    </div>
-
+            <div>
+                <h2>GITHUB</h2>
+                <a href="https://github.com/brunomgferreira" target="_blank">Check github</a>
+            </div>
+        </div>    
+    </main>
 
     <footer>
         <div class="footer-left">
-            <p>&#64; 2023. Bruno Ferreira</p>
+            <p>&#64; <span id="copyright-year"></span>. Bruno Ferreira</p>
         </div>
         <div class="footer-right">
-            <a href="contact" class="contact-button">
+            <a href="contact" class="footer-button">
                 Contact
             </a>
-            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="linkedin-button">
+            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="footer-button">
                 Linkedin
             </a>
-            <a href="https://github.com/brunomgferreira" target="_blank" class="github-button">
+            <a href="https://github.com/brunomgferreira" target="_blank" class="footer-button">
                 GitHub
             </a>
         </div>
     </footer>
 
-    <script>
-        var menu = document.getElementById("menu");
-
-        function closemenu() {
-
-            menu.style.top = "-200vh"
-            window.onscroll = function () { };
-
-        }
-
-        function openmenu() {
-            menu.style.top = "0"
-
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-                // if any scroll is attempted, set this to the previous value
-                window.onscroll = function () {
-                    window.scrollTo(scrollLeft, scrollTop);
-                };
-
-        }
-    </script>
-
+    <script type="module" src="./scripts/footer.js"></script>
+    <script type="module" src="./scripts/contact.js"></script>
 </body>
 
 </html>

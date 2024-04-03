@@ -1,12 +1,13 @@
 /* Footer */
 
 footer {
-    padding: 0 60px;
-    padding-top: 100px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 160px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 1em;
 }
 
 .footer-left {
@@ -14,7 +15,6 @@ footer {
     justify-content: left;
     align-items: center;
 
-    font-size: 1.4em;
     letter-spacing: 1px;
     color: gray;
 }
@@ -24,55 +24,24 @@ footer {
     justify-content: right;
     align-items: center;
 
-    font-size: 1.4em;
     letter-spacing: 1px;
     color: gray;
 }
 
-.contact-button {
+.footer-button {
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+
     margin-right: 40px;
     margin-bottom: -4px;
-    padding-bottom: 4px;
     cursor: pointer;
 
     text-decoration: none;
     color: gray;
 }
 
-.contact-button:hover {
-    margin-bottom: -5px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(170, 170, 170);
-}
-
-.linkedin-button {
-    margin-right: 40px;
-    margin-bottom: -4px;
-    padding-bottom: 4px;
-    cursor: pointer;
-
-    text-decoration: none;
-    color: gray;
-}
-
-.linkedin-button:hover {
-    margin-bottom: -5px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(170, 170, 170);
-}
-
-.github-button {
-    margin-bottom: -4px;
-    padding-bottom: 4px;
-    cursor: pointer;
-
-    text-decoration: none;
-    color: gray;
-}
-
-.github-button:hover {
+.footer-button:hover {
     margin-bottom: -5px;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -80,3 +49,32 @@ footer {
 }
 
 /* Footer */
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}

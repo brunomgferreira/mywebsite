@@ -2,18 +2,16 @@
 
 header {
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     margin: 0;
-    height: 200px;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.header-name {
+#header-name {
     cursor: pointer;
     font-family: ArquitectaHeavy, FuturaBook, Roboto, Arial;
     font-size: 2em;
@@ -23,8 +21,130 @@ header {
     color: rgb(0, 0, 0);
     text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.0);
     margin: 0;
-    margin-left: 2em;
     text-decoration: none;
 }
 
+#close-icon {
+    cursor: pointer;
+    width: 2.4em;
+}
+
+#menu-icon {
+    cursor: pointer;
+    width: 2.4em;
+}
+
+.scale-appear {
+    opacity: 0;
+    transform: scale(0.6);
+    animation: scaleAppear 0.3s forwards;
+}
+
+.scale-disappear {
+    animation: scaleDisappear 0.3s forwards;
+}
+
+@keyframes scaleDisappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+  }
+  
+  @keyframes scaleAppear {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+.hidden {
+    display: none;
+}
+
 /* Header */
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}

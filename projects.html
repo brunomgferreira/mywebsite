@@ -16,113 +16,69 @@
 
 <body>
     <header>
-        <a class="header-name" href="index">BRUNO <br> FERREIRA</a>
-        <img class="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" onclick="openmenu()">
-        <nav id="menu">
-            <ul>
-                <li><a href="about">About</a></li>
-                <li><a href="experience">Experience</a></li>
-                <li><a href="education">Education</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Download CV</a></li>
-            </ul>
-            <img class="close-icon" src="https://brunomgferreira.github.io/mywebsite/images/close.svg"
-                onclick="closemenu()">
-            <a class="menu-name" href="index">BRUNO <br> FERREIRA</a>
-        </nav>
+        <p id="header-name">BRUNO <br> FERREIRA</p>
+        <img class="scale-appear" id="menu-icon" src="https://brunomgferreira.github.io/mywebsite/images/menu.svg" alt="Menu Icon">
+        <img id="close-icon" class="hidden" src="https://brunomgferreira.github.io/mywebsite/images/close.svg" alt="Close Icon">
     </header>
-
-    <div class="projects">
-        <div class="projects-text">
-            <p class="projects-title">PROJECTS</p>
-            <p>"The best preparation for good work tomorrow is to do good work today."</p>
-            <p class="author">Elbert Hubbard</p>
+    <menu class="hidden">
+        <nav>
+            <ul>
+                <li><a href="projects">Projects</a></li>
+                <li><a href="about">About me</a></li>
+                <li><a href="experience">Experience</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="files/Bruno Ferreira - CV.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </menu>
+    <main>
+        <div id="project-display-container">
+            <div id="project-display">
+                <div id="poject-image-container">
+                    <img id="poject-image" src="./images/car.png" alt="Project Image">
+                </div>
+                <div id="project-content-container">
+                    <ul id="project-skills">
+                        <li>NodeJS</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="image-container">
-        <img class="project-image" src="images/car.png">
-    </div>
-
-    <div class="info">
         <div>
-            <div class="container-title">
-                <p>CAR RESTORATION</p>
+            <div>
+                <p id="projects-title">PROJECTS</p>
+                <p id="projects-number">4</p>
             </div>
-            <div class="container-text">
-                <p> Besides sports, I love anything with an engine and 4 wheels. And I'm lucky enough to be able to
-                    restore cars with my dad. Last year I finished restoring my dream car, a VW Golf Mk2. It took 2
-                    years of daily work to leave the car in an impeccable state, because "You either do it right, or do
-                    it twice". It was a very challenging project, but at the same time very
-                    enriching. I learned a lot. Not only hard skills, but also soft skills like time and resource
-                    management.</p>
-            </div>
+            <ul id="projects">
+                <li>Done</li>
+                <li>Battleship</li>
+                <li>My Website</li>
+                <li>Car Restoration</li>
+            </ul>
         </div>
-    </div>
-
-    <div class="image-container">
-        <img class="project-image" src="images/website-mockup.png">
-    </div>
-
-    <div class="info">
-        <div>
-            <div class="container-title">
-                <p>WEB DEVELOPING</p>
-            </div>
-            <div class="container-text">
-                <p>I started learning HTML and CSS with the final goal of having a personal website by the end of
-                    January. The deadline was tight, since I only had 1 month to learn all I needed to develop my own
-                    website. The result of one month of dedication and hardwork was this website, which I'm very proud
-                    of. Even though there are many things I would have done different now, I'm satisfied with the final
-                    result and certain this is just the beginning of my learning journey in the web developing world.
-                </p>
-            </div>
-        </div>
-    </div>
-
-
+    </main>
 
     <footer>
         <div class="footer-left">
-            <p>&#64; 2023. Bruno Ferreira</p>
+            <p>&#64; <span id="copyright-year"></span>. Bruno Ferreira</p>
         </div>
         <div class="footer-right">
-            <a href="contact" class="contact-button">
+            <a href="contact" class="footer-button">
                 Contact
             </a>
-            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="linkedin-button">
+            <a href="https://www.linkedin.com/in/-brunoferreira-/" target="_blank" class="footer-button">
                 Linkedin
             </a>
-            <a href="https://github.com/brunomgferreira" target="_blank" class="github-button">
+            <a href="https://github.com/brunomgferreira" target="_blank" class="footer-button">
                 GitHub
             </a>
         </div>
     </footer>
 
-    <script>
-        var menu = document.getElementById("menu");
-
-        function closemenu() {
-
-            menu.style.top = "-200vh"
-            window.onscroll = function () { };
-
-        }
-
-        function openmenu() {
-            menu.style.top = "0"
-
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-                // if any scroll is attempted, set this to the previous value
-                window.onscroll = function () {
-                    window.scrollTo(scrollLeft, scrollTop);
-                };
-
-        }
-    </script>
+    <script type="module" src="./scripts/footer.js"></script>
+    <script type="module" src="./scripts/projects.js"></script>
 
 </body>
 
