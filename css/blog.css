@@ -224,3 +224,176 @@ article p {
         transform: translateX(-5em) scale(0.8);
     }
 }
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2rem;
+    }
+
+    article > header {
+        margin: 0;
+        padding: 0;
+        width: 96%;
+    }
+    
+    article h2 {
+        font-family: ArquitectaMedium;
+        display: inline;
+        line-height: 2rem;
+        font-size: 1.6rem;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    article > div {
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article header h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    article header p {
+        font-size: 2.4rem;
+    }
+    
+    article p {
+        line-height: 2.4rem;
+        font-size: 2rem;
+        text-indent: 4rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2rem;
+    }
+
+    article > header {
+        margin: 0;
+        padding: 0;
+        width: 96%;
+    }
+    
+    article h2 {
+        font-family: ArquitectaMedium;
+        display: inline;
+        line-height: 2rem;
+        font-size: 1.6rem;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    article > div {
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article header h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    article header p {
+        font-size: 2.4rem;
+    }
+    
+    article p {
+        line-height: 2.4rem;
+        font-size: 2rem;
+        text-indent: 4rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2rem;
+    }
+
+    article > header {
+        margin: 0;
+        padding: 0;
+        width: 96%;
+    }
+    
+    article h2 {
+        font-family: ArquitectaMedium;
+        display: inline;
+        line-height: 2rem;
+        font-size: 1.6rem;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    article > div {
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article header h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    article header p {
+        font-size: 2.4rem;
+    }
+    
+    article p {
+        line-height: 2.4rem;
+        font-size: 2rem;
+        text-indent: 4rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}

@@ -212,3 +212,107 @@ main > header > div > p {
         transform: translateX(-3em) scale(0.8);
     }
 }
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2.4rem;
+    }
+
+    .info > div {
+        gap: 2rem;
+    }
+
+    .info > div > h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    .info > div > a {
+        line-height: 3rem;
+        font-size: 2.4rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2.4rem;
+    }
+
+    .info > div {
+        gap: 2rem;
+    }
+
+    .info > div > h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    .info > div > a {
+        line-height: 3rem;
+        font-size: 2.4rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    main {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+
+    main > header > div > p {
+        font-size: 2.4rem;
+    }
+
+    .info > div {
+        gap: 2rem;
+    }
+
+    .info > div > h2 {
+        font-size: 2.6rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+    
+    .info > div > a {
+        line-height: 3rem;
+        font-size: 2.4rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}

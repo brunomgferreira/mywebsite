@@ -49,3 +49,32 @@ footer {
 }
 
 /* Footer */
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}

@@ -325,3 +325,129 @@ main > header > div > p:nth-of-type(2) {
         transform: translateY(-2rem);
     }
 }
+
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+    
+    main > header > div > p:nth-of-type(1) {
+        font-size: 2rem;
+    }
+    
+    main > header > div > p:nth-of-type(2) {
+        font-size: 1.6rem;
+    }
+
+    .time {
+        font-size: 1.6rem;
+    }
+
+    #timeline-container {
+        padding-bottom: 4rem;
+    }
+
+
+    #timeline-container > .time-stamp {
+        margin-left: 3rem;
+    }
+
+    .time-stamp > h2 {
+        font-size: 1.8rem;
+    }
+
+    .time-stamp > p {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+    
+    main > header > div > p:nth-of-type(1) {
+        font-size: 2rem;
+    }
+    
+    main > header > div > p:nth-of-type(2) {
+        font-size: 1.6rem;
+    }
+
+    .time {
+        font-size: 1.6rem;
+    }
+
+    #timeline-container {
+        padding-bottom: 4rem;
+    }
+
+
+    #timeline-container > .time-stamp {
+        margin-left: 3rem;
+    }
+
+    .time-stamp > h2 {
+        font-size: 1.8rem;
+    }
+
+    .time-stamp > p {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    main > header > div > h1 {
+        font-size: 3rem;
+    }
+    
+    main > header > div > p:nth-of-type(1) {
+        font-size: 2rem;
+    }
+    
+    main > header > div > p:nth-of-type(2) {
+        font-size: 1.6rem;
+    }
+
+    .time {
+        font-size: 1.6rem;
+    }
+
+    #timeline-container {
+        padding-bottom: 4rem;
+    }
+
+
+    #timeline-container > .time-stamp {
+        margin-left: 3rem;
+    }
+
+    .time-stamp > h2 {
+        font-size: 1.8rem;
+    }
+
+    .time-stamp > p {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+    main {
+        width: 80%;
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+    main {
+        width: 80%;
+    }
+}

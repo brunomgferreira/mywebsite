@@ -71,3 +71,80 @@ header {
 }
 
 /* Header */
+
+/* Extra Small Devices (Phones) */
+@media all and (max-width: 576px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media all and (min-width: 577px) and (max-width: 768px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+    header {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #header-name {
+        font-size: 2.6rem;
+        padding-left: 1.8rem;
+    }
+
+    #menu-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+
+    #close-icon {
+        width: 2.8rem;
+        padding-right: 1.8rem;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media all and (min-width: 1201px) {
+}
