@@ -54,12 +54,7 @@ const projectDetails = [
   },
 ];
 
-const projectsHref = [
-  "done.html",
-  "battleship.html",
-  "mywebsite.html",
-  "carRestoration.html",
-];
+const projectsHref = ["done", "battleship", "mywebsite", "carRestoration"];
 
 projectsNumber.textContent = projectDetails.length;
 
@@ -213,7 +208,7 @@ headerName.addEventListener("click", () => {
   closeMenu();
   closeMain();
   setTimeout(() => {
-    window.location.href = "/index.html";
+    window.location.href = "/index";
   }, 310);
 });
 

@@ -106,7 +106,7 @@ headerName.addEventListener("click", () => {
   closeMenu();
   closeMain();
   setTimeout(() => {
-    window.location.href = "/index.html";
+    window.location.href = "/index";
   }, 310);
 });
 
